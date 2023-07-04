@@ -1,4 +1,4 @@
-package com.S301N1Ex1;
+package s301_N1Ex1_Singleton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class Undo {
     //1 Añade un campo estático privado a la clase Undo para almacenar la instancia Singleton
     //atributos
     private static Undo instance;// declaramos una variable estática instance de tipo Undo que almacenará la única instancia de la clase
-    private List<String> pedidosZapatillas;//declaramos una lista pedidosZapatillas para almacenar los últimos pedidos de zapatillas introducidas
+    private final List<String> pedidosZapatillas;//declaramos una lista pedidosZapatillas para almacenar los últimos pedidos de zapatillas introducidas
 
     //Constructor definimos un constructor privado para evitar que otras clases puedan instanciar la clase directamente.
     private Undo() {
@@ -25,16 +25,20 @@ public class Undo {
     //metodos generales
     //el método agregarPedidoZapatillas() para añadir un pedido de zapatillas a la lista de pedidos
     public void agregarPedidosZapatillas(String pedido){
+
         pedidosZapatillas.add(pedido);
     }
     //implementamos el método eliminarPedidoZapatillas() para eliminar un pedido de zapatillas de la lista de pedidos
     public void eliminarPedidosZapatilas(String pedido) {
+
+
         pedidosZapatillas.remove(pedido);
     }
     //implementamos el método listarPedidosZapatillas() para mostrar por consola los últimos pedidos de zapatillas introducidos
     public void listarPedidosZapatillas() {
-        for (String pedido : pedidosZapatillas) {
-            System.out.println(pedido);
-        }
+
+        for (String pedido : pedidosZapatillas);
+
+        System.out.println(pedidosZapatillas);
     }
 }
